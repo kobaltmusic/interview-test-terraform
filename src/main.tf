@@ -31,11 +31,3 @@ provider "aws" {
     sts            = "http://localstack:4592"
   }
 }
-
-resource "aws_sns_topic" "test" {
-  display_name = "sdfhdflkhsdfh"
-}
-
-resource "aws_elasticsearch_domain" "test" {
-  domain_name = "test"
-}
