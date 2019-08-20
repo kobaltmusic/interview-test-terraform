@@ -48,3 +48,19 @@ The AWS CLI has also been abstracted into the Makefile and needs a simple transl
 ```shell script
 $ SERVICE=ec2 CMD=describe-instances make aws
 ```
+
+## Known issues
+
+### AMIs
+
+Using the AMI data source does not seem to work when trying to query Localstack.  
+A valid AMI ID has been set in the locals within the `variables.tf` file but a list of images can be found by querying the AWS CLI.
+
+```shell script
+$ SERVICE=ec2 CMD=describe-images make aws
+```
+
+### Instance type
+
+It's a bit tricky to know which instance types are available.  
+A valid instance type has been set in the locals within the `variables.tf` file.
