@@ -22,6 +22,8 @@ sts=4592
 
 up: down
 	rm -rf ./src/.terraform* ./src/terraform*
+	docker-compose pull --ignore-pull-failures
+	docker-compose build --pull
 	docker-compose up localstack
 
 down:
