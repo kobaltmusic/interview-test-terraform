@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+    name: interview-test-terraform
+    annotations:
+        github.com/project-slug: ktech-org/interview-test-terraform
+spec:
+    lifecycle: experimental
+    owner: virtual/coding tests
+    type: coding test
